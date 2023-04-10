@@ -1,0 +1,35 @@
+Background:
+Due to language barriers, a US-based life insurance company is facing a challenge in communicating with the Spanish-speaking community in Mexico. The locals there need help understanding English, and the company can only provide some translators. To overcome this challenge and provide coverage to the locals, the company needs a machine translation model that can accurately translate the application request letter from Spanish to English. 
+
+ 
+Problem Statement:
+Your task is to build an attention-based sequence-to-sequence model that can effectively understand the context of Spanish sentences and translate them into clear and coherent English sentences. The company aims to use this model to ensure seamless communication and provide coverage to the Spanish-speaking community in Mexico. In many countries where English is not a very common language for speaking, local traders often need help doing business with merchants from the US or other English-speaking countries. 
+
+NOTE: In such a case, a language translation model does wonders, and local traders need not worry about knowing too many languages. In this assignment, you will simply be building a Spanish-to-English NMT model. Although, in the real world, you could also build an NMT model for other local languages.
+
+ 
+
+Why is this assignment important?
+
+Building a Spanish-to-English translation model will help you understand the core basics of an attention-based-sequence-to-sequence model. This is slightly similar to the Hindi - English NMT Model you studied in the main content of the modules; however, in this assignment, you will understand some essential data-cleaning tasks specific to the Spanish language. It will help you deal with or understand challenges to languages like Spanish with 'special characters.'
+
+ 
+
+Notebook:
+Besides, an important note to remember while doing this assignment is that you are given a 'Stub Code File,' which means a pre-written code is already shared with you. You have to fill in the place where it is mentioned, 'Write Code Here,' following the instructions mentioned in that cell or for the task in that particular section.
+
+Remember the following points while solving the assignment:
+
+All the tasks and details around performing them are detailed in this stub code file. 
+You need to go through the instructions mentioned as 'comments' in the stub code file and add a code where it is mentioned as **'Insert/Write Code Here —'**. 
+To understand the complete flow of that particular section and its sub-tasks, scroll through the table of contents section in the left tab of this stub code file.
+In case of any existing part of code or something already written, you may or may not modify it as long as you serve the purpose of the task required in that section.
+
+Download the stub file below and ensure you have gone through the basics of the Encoder-Decoder mechanism and Bahnadau Attention Model, and then start doing the assignment. 
+
+NMT Assignment Stub Code File
+Download
+Dataset:
+The dataset used is a paired corpus of English-Spanish, provided by Anki. The process to download the dataset is provided in the notebook already.
+
+ 

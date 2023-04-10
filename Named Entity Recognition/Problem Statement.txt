@@ -1,0 +1,136 @@
+Consider a hypothetical health tech company, BeHealthy, which aims to connect medical communities with millions of patients through a web platform. The platform enables doctors to list their services, manage patient interactions, and provide services such as booking appointments and ordering medicines online. Using this platform, doctors can easily organize appointments, track a patient’s past medical records, and provide e-prescriptions. 
+
+Companies like BeHealthy generate large volumes of data by providing medical services, prescriptions, and online consultations. Let’s take a look at the following snippet of medical data that may be generated when a doctor writes notes to their patient or prepares reviews of their patient.
+
+ 
+
+“The patient was a 62-year-old man with squamous cell lung cancer, which was first successfully treated by a combination of radiation therapy and chemotherapy.”
+
+ 
+
+As you can observe, a person with a non-medical background may not understand the various medical terms used in the text. We have taken a simple sentence from a medical data set to understand the problem. Here, you can understand the meaning of the terms “cancer” and “chemotherapy.” 
+
+
+Suppose you have been asked to identify a disease name and its possible treatment from a given data set and list it out in a table or a dictionary like this.
+
+
+
+ 
+
+After analyzing the problem given above, you must build a custom NER to get the list of diseases and their treatment from the data set. Let’s first download the data set given below.
+
+
+Note: You are required to complete the assignment on the Google Collab notebook, so you need to download the data set and then upload it to the required Google Drive folder to read it in your respective notebook.
+
+Train Sentence Dataset
+Download
+Train Label Dataset
+Download
+Test Sentence Dataset
+Download
+Test Label Dataset
+Download
+ 
+
+You can download the notebook given below and open it in Google Collab to get started.
+
+Commented Notebook
+Download
+ 
+
+In the next video, you will get an idea of what the data set looks like.
+
+Play Video2890792
+Now you have understood what the data set looks like. Let’s take a look at the tasks you have to perform in the assignment. Sumit will explain the problem and the steps that you need to follow to solve it in this assignment.
+
+Play Video2890792
+As you saw in the video above, you need to process four data sets:
+
+train_sent
+test_sent
+train_label
+test_label
+ 
+You have the train and test data sets. The train data set is used to train the CRF model, and the test data set is used to evaluate the model you have built. First, you will understand the “train_sent” and “test_sent” data sets. Let’s take a look at the structure of these data sets using the image provided below.
+
+ 
+
+
+
+ 
+
+You need to change the sentences in the image above in the following way.
+
+Sentence1: …using a Spearman-rank Correlation
+Sentence2: This relationship should be taken into account when interpreting the AFI as a measure of fetal well-being.
+Sentence3: The study population…
+...and so on.
+ 
+
+You can also refer to the image given below to get a better idea of how to create sentences from words. At every break, you can create a new sentence.
+
+ 
+
+
+
+ 
+
+The "train_sent" data set contains 2,599 sentences formed from the words, and the "test_sent" data set contains 1,056 sentences formed from the words. Next, we will examine the "train_label" and "test_label" data sets.
+
+ 
+
+
+
+
+The data sets discussed above pertains to labels associated with diseases and their respective treatments. It includes three labels: O for "Other," D for "Disease," and T for "Treatment." These labels match with the words in the “train_sent” and “test_sent” data sets. Therefore, there is a one-to-one correspondence between the labels in the “train_label” and “test_label” data sets and the words in the “train_sent” and “test_sent” data sets. You need to again create the lines of labels corresponding to each sentence in the “train_sent” and “test_sent” data sets as shown below.
+
+ 
+
+
+
+ 
+
+So, you got an overview of the assignment and the structure of the data set. Let’s take a look at the steps you need to follow to complete the assignment.
+
+ 
+
+In this assignment
+You are required to process and modify the given data into the sentence format. You need to do this for the “train_sent” and “train_label” data sets and for test data sets.
+
+Next, you need to define the features to build the CRF model.
+
+Further, you must apply these features in each sentence in the train and test data set to get the feature values.
+
+Once the features are computed, you need to define the target variable and then build the CRF model.
+
+Next, you need to evaluate the model's performance using the test data set.
+
+Finally, you are required to create a dictionary in which diseases are the keys and treatments are the values.
+
+ 
+
+NOTE
+You are advised to use Google Collab for performing your demonstrations. In the videos, the instructor might have used other IDEs but you can do the same using Google collab. In case of reading any dataset, you upload the dataset in your google drive and then read it. Below commands help to read files in the Google Collab.
+
+ 
+
+1. Reading the csv file command:
+
+#give google drive permission
+from google.colab import drive
+drive.mount('/content/drive')
+
+//read file
+df = pd.read_csv("path in google drive/filename.csv")
+ 
+
+2. Opening and reading the text file command:
+
+#import the data from the drive here by uploading the dataset and then reading it
+from google.colab import drive
+drive.mount('/content/drive')
+
+
+with open('/content/drive/My Drive/Samsung.txt', 'r', encoding="utf-8") as con:
+    samsung_reviews = con.read()
+    con.close()
